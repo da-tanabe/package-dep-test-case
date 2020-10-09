@@ -1,0 +1,10 @@
+sdk-version: 1.6.0-snapshot.20201007.5314.0.b4a47d0b
+name: trigger
+source: Trigger.daml
+version: 1.0.0
+dependencies:
+  - daml-prim
+  - daml-stdlib
+  - ../service/.daml/dist/service-1.0.0.dar
+data-dependencies:
+  - ../model/.daml/dist/model-1.0.0.dar

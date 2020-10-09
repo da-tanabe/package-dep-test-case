@@ -1,0 +1,19 @@
+module Trigger where
+
+import Model
+import Service
+
+template Quux
+  with
+    party : Party
+  where
+    signatory party
+
+    controller party can
+      QuuxDoFoo : ContractId Model.Foo
+        do
+          create Model.Foo with ..
+
+      QuuxDoBar : ContractId Service.Bar
+        do
+          create Service.Bar with ..

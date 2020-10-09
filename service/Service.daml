@@ -1,0 +1,14 @@
+module Service where
+
+import Model
+
+template Bar
+  with
+    party : Party
+  where
+    signatory party
+
+    controller party can
+      BarDoFoo : ContractId Model.Foo
+        do
+          create Model.Foo with ..

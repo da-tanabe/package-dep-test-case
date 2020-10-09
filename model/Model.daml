@@ -1,0 +1,12 @@
+module Model where
+
+template Foo
+  with
+    party : Party
+  where
+    signatory party
+
+    controller party can
+      FooDo : ContractId Foo
+        do
+          create Foo with ..
