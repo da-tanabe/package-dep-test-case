@@ -1,0 +1,27 @@
+module Main where
+
+
+template NoOp
+  with
+    party : Party
+  where
+    signatory party
+    key party : Party
+    maintainer key
+    
+    controller party can
+      nonconsuming DoNothing: ()
+        do
+          return ()
+
+    controller party can
+      nonconsuming DoSomething: ContractId Thing
+        do
+          create Thing with ..
+          
+
+template Thing
+  with
+    party : Party
+  where
+    signatory party

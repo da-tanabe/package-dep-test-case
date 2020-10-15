@@ -1,0 +1,15 @@
+sdk-version: 1.6.0
+name: bugreport
+source: daml
+parties:
+  - Alice
+version: 0.0.1
+dependencies:
+  - daml-prim
+  - daml-stdlib
+  - daml-script
+codegen:
+  java:
+    package-prefix: com.daml.bugreport.model
+    output-directory: target/generated-sources/bugreport
+    decoderClass: com.daml.bugreport.TemplateDecoder
